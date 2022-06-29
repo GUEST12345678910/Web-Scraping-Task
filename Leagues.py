@@ -27,8 +27,11 @@ for i in ang['uniqueKeyToGroupDetails'].keys():
         tennis.append(i.split('-')[-1])
     elif i.startswith('volleyball'):
         volleyball.append(i.split('-')[-1])
-
-json_string = json.dumps(volleyball)
-with open('tennis_leagues.json','w') as t:
-    t.write(json_string)
-    t.close()
+        
+def save_data(sport_league):
+    json_string = json.dumps(volleyball)
+    with open('tennis_leagues.json','w') as t:
+        t.write(json_string)
+        t.close()
+        
+   
